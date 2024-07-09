@@ -31,13 +31,13 @@ This project aims to create a system capable of measuring weights using a load c
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/LoadCellMeasurementSystem.git
+   git clone https://github.com/SamiKaab/loadCellViz.git
    ```
 
 2. Navigate to the project directory:
 
    ```sh
-   cd LoadCellMeasurementSystem
+   cd loadCellViz
    ```
 3. Create a virtual environment and activate it (optional). This program was tested on Python 3.8.
 4. Install the required Python packages:
