@@ -1,9 +1,9 @@
 ## Introduction
 
 This project aims to create a system capable of measuring weights using a load cell sensor. The ESP32 microcontroller reads data from the load cell via the amplifier and sends the data to a computer for further processing and visualization.
-
+<!-- 
 ![Video Demo](doc/angle_adjsutment_demo.gif)
-![Video Demo](doc/loading_demo.gif)
+![Video Demo](doc/loading_demo.gif) -->
 
 
 ---
