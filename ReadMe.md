@@ -24,74 +24,8 @@ This project aims to create a system capable of measuring weights using a load c
 
 ## Wiring Guide
 
-<!-- | **Load Cell** | **HX711**     | **ESP32** |
-|---------------|-----------    |-----------|
-| Red (E+)      | Red (E+)      |           |
-| Black (E-)    | Black (E-)    |           |
-| White (A-)    | White (A-)    |           |
-| Green (A+)    | Green (A+)    |           |
-|               | VDD           | 3.3V      |
-|               | VCC           | 3.3V      |
-|               | DAT           | GPIO18    |
-|               | CLK           | GPIO19    |
-|               | GND           | GND       | -->
+![Wiring Diagram](doc\wiring_diagram.png)
 
-
-<div style="display: flex; justify-content: space-around; align-items: center;">
-   <table>
-      <tr>
-         <th>Load Cell</th>
-         <th>HX711</th>
-         <th>ESP32</th>
-      </tr>
-      <tr>
-         <td>Red (E+)</td>
-         <td>Red (E+)</td>
-         <td></td>
-      </tr>
-      <tr>
-         <td>Black (E-)</td>
-         <td>Black (E-)</td>
-         <td></td>
-      </tr>
-      <tr>
-         <td>White (A-)</td>
-         <td>White (A-)</td>
-         <td></td>
-      </tr>
-      <tr>
-         <td>Green (A+)</td>
-         <td>Green (A+)</td>
-         <td></td>
-      </tr>
-      <tr>
-         <td></td>
-         <td>VDD</td>
-         <td>3.3V</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td>VCC</td>
-         <td>3.3V</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td>DAT</td>
-         <td>GPIO18</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td>CLK</td>
-         <td>GPIO19</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td>GND</td>
-         <td>GND</td>
-      </tr>
-   </table>
-   <img src="doc/wiring_diagram.png" alt="Wiring Diagram" style="max-width: 70%;">
-</div>
 
 ## Installation
 
