@@ -1,3 +1,10 @@
+/*
+This code is for the ESP32 microcontroller. It reads the weight from the HX711 load cell sensor and sends it over Bluetooth Low Energy (BLE), and serial. 
+The code uses the HX711 library to read the weight from the sensor and the ArduinoBLE library to send the data over BLE.
+The calibration factor is set to -1554, which may need to be adjusted based on your setup.
+Author: Sami Kaab
+Date: 2024-07-09
+*/
 #include <Arduino.h>
 #include "HX711.h"
 #include <ArduinoBLE.h>
@@ -15,7 +22,6 @@ BLEFloatCharacteristic weightCharacteristic("beb5483e-36e1-4688-b7f5-ea07361b26a
 void calibrate() {
   Serial.println("Start calibration:");
   Serial.println("Remove all weight from scale");
-  Serial.println("After readings begin, place known weight on scale");
 
   scale.set_scale();
   scale.tare(); // Reset the scale to 0

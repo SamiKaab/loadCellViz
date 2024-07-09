@@ -1,7 +1,13 @@
+"""
+This script reads the weight data from the esp32 through serial communication and plots it in real-time using matplotlib.
+Author: Sami Kaab
+Date: 2024-07-08
+"""
 import serial.tools.list_ports
 import serial
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+# pip install matplotlib pyserial
 
 # Serial port configuration
 baud_rate = 115200
@@ -10,6 +16,11 @@ minWeight = -50
 state = ""
 
 def find_serial_port():
+    """Find the serial port that the ESP32 is connected to.
+
+    Returns:
+        str: The serial port name, or None if the device is
+    """
     global state
     state = "Looking for device"
     ports = serial.tools.list_ports.comports()
@@ -34,12 +45,18 @@ fig, ax = plt.subplots()
 bar = ax.bar([0], [0])
 
 def update(frame):
+    """Update the plot with the latest weight data.
+
+    Args:
+        frame (int): The frame number
+    """
     global maxWeight, minWeight, state
     try:
         ax.set_title(state)
         # Read a line from the serial port
         line = ser.readline().decode('utf-8').strip()
         weight = float(line)
+        # Update the min and max weight values
         maxWeight = max(maxWeight, weight)
         minWeight = min(minWeight, weight)
         

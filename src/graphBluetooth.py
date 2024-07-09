@@ -1,9 +1,17 @@
+"""
+This script reads the weight from the esp32 through Bluetooth communication and plots it in real-time using matplotlib.
+Author: Sami Kaab
+Date: 2024-07-09
+"""
 import asyncio
 import struct
 from bleak import BleakClient, BleakScanner, BleakError
 import threading
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+
+# pip install matplotlib pyserial bleak 
+
 
 # Bluetooth setup
 SERVICE_UUID = "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
